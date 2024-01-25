@@ -1,0 +1,12 @@
+extends ../layout/_main
+
+block append config
+  -
+    const page = {
+      title: `About`,
+      description: `このページは、Aboutページです`,
+    };
+
+block mainContent
+  .p-hero
+    h2.p-hero__title #{page.title}

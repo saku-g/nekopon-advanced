@@ -1,0 +1,23 @@
+extends ../layout/_layout
+
+block append config
+  -
+    const isTop = true;
+    const page = {
+      title: `Topページです`,
+      description: `このページは、Topページです`,
+      //- url: 'test.com'
+    };
+
+block mainContent
+  .p-hero
+    h1.p-hero__title #{page.title}
+
+  section.p-section
+    h2.c-title セクションタイトル
+    ul
+      li リスト1
+      li リスト2
+      li リスト3
+    p
+      img(src="/public/mountain.png", alt="", srcset="")
