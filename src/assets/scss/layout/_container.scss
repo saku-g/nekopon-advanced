@@ -1,6 +1,6 @@
 @use "../global/" as *;
 
 .l-container {
-  width: min(90%, 1200px);
+  width: min(90%, var(--md-content-width));
   margin-inline: auto;
 }

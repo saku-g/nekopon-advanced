@@ -8,9 +8,11 @@ html(lang="ja")
       include ../include/_head
 
   body
-    include ../include/_header
+    include ../include/_svg
+    .l-site
+      include ../include/_header
 
-    main#main.l-main.p-main
-      block mainContent
+      main#main.l-site__main
+        block mainContent
 
-    include ../include/_footer
+      include ../include/_footer
