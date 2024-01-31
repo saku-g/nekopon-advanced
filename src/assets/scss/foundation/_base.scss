@@ -15,7 +15,7 @@
   --md-content-width: 1110;
   --lg-content-width: 1300;
   --sp-comp-width: 375;
-  --pc-comp-width: 1280;
+  --pc-comp-width: 1440;
 }
 
 html {
@@ -30,6 +30,7 @@ body {
   background-color: var(--base-color);
   color: var(--text-color);
   font-family: var(--font-base);
+  font-size: rem(15);
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
   text-rendering: optimizelegibility;

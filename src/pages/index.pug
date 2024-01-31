@@ -9,3 +9,88 @@ block append config
     };
 
 block mainContent
+  //- hero
+  .p-hero
+    .p-hero__inner
+      .p-hero__body
+        p(lang="en")
+          span.u-inline-block Web Design
+          span.u-inline-block Specialist
+        p お客様の夢を叶える<br aria-hidden="true">Webサイトを制作
+        +primaryButton("/contact/", '-secondary', "contact")
+      .p-hero__scroll
+        span(lang="en") Scroll
+
+  //- News
+  section.p-indexSection.-news
+    .l-container.-sm
+      .p-news
+        .p-news__header
+          +primaryTitle('News', 'お知らせ')
+        .p-news__body
+          ul.p-newsList
+            li.p-newsList__item
+              a(href="#").p-newsList__link
+                time.p-newsList__date 2030.02.01
+                span.p-newsList__label お知らせ
+                p.p-newsList__title Webデザインニュースサイト「ウェブマガジン」に取材いただきました
+
+  //- Service
+  section.p-indexSection
+    .l-container
+      +primaryTitle('Service', '事業内容')
+      .l-grid(data-gap="6")
+        each service in serviceData
+          section.l-grid__item(data-col="12 md:6 lg:4")
+            .c-card.p-service
+              .c-card__body
+                h3.p-service__title #{service.title}
+                p.p-service__text #{service.description}
+              figure.c-card__imgWrapper
+                img(
+                  src=`/src/assets/img/service/${service.imageFile}.jpg`,
+                  alt="",
+                  srcset=`/src/assets/img/service/${service.imageFile}.jpg 1x, /src/assets/img/service/${service.imageFile}@2x.jpg 2x`
+                )
+      +primaryButton()
+
+  //- Works
+  section.p-indexSection
+    .l-container.-lg
+      .p-indexWorks
+        .p-indexWorks__body
+          +primaryTitle('Works', '制作実績')
+          p 様々なジャンルのWebサイト制作が可能です。<br aria-hidden="true">ご購入やお申込み数の増加などを実現します！
+        .p-indexWorks__slider
+          .splide(aria-label="制作実績の画像一覧")
+            .splide__track
+              ul.splide__list
+                each fileName in ['smoothiesta', 'web-conference', 'lamina']
+                  li.splide__slide
+                    figure
+                      img(
+                        src=`/src/assets/img/works/${fileName}.jpg`,
+                        alt="",
+                        srcset=`/src/assets/img/works/${fileName}.jpg 1x, /src/assets/img/works/${fileName}@2x.jpg 2x`
+                      )
+        +primaryButton()
+
+  //- Company
+  section.p-indexSection
+    .l-container
+      .p-company
+        +primaryTitle('Company', '私たちについて')
+        p.p-company__copy: strong サイトのゴール = 夢を叶えること
+        p お客様の夢を叶えること。それがWebサイトのゴールであり、私たちが目指すことです。だからこそちゃんと成果を出すサイトを全力でお作りします。お客様の笑顔を見たい。夢を実現する手助けをさせてください。
+      +primaryButton()
+
+  //- Recruit
+  section.p-indexSection
+    .l-container
+      .p-indexRecruit
+        .p-indexRecruit__body
+          +primaryTitle('Recruit', '採用情報')
+          p 私たちと一緒に働きませんか？
+          +primaryButton()
+        figure.p-indexRecruit__imgWrapper
+          img(src="/src/assets/img/top/recruit.jpg", alt="", srcset="")

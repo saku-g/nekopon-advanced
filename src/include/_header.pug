@@ -1,10 +1,19 @@
 header.l-site__header.p-header
+  a(href="#main").u-visuallyHidden メインコンテンツにスキップ
   .p-header__inner
     h1.p-header__title
       a.p-header__logo(href="/")
         svg(aria-hidden="true")
           use(href="#logo")
     nav.p-header__nav
-      ul.p-header__navList
-        li: a(href="/") Home
-        li: a(href="/about") About
+      h2.u-visuallyHidden サイト内メニュー
+      button(type="button").p-hamburger
+        svg
+          title メニュー
+          rect(y="0" width="30" height="2" rx="1" ry="1")
+          rect(y="7" width="30" height="2" rx="1" ry="1")
+          rect(y="14" width="30" height="2" rx="1" ry="1")
+      ul.p-globalNav
+        each val, index in navigation
+          if index !== 0
+            li.p-globalNav__item: a(href=`/${val}/`).p-globalNav__link=val

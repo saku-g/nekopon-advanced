@@ -1,0 +1,28 @@
+{
+  "navigation": [
+    "home",
+    "news",
+    "service",
+    "works",
+    "company",
+    "recruit",
+    "contact"
+  ],
+  "serviceData": [
+    {
+      "title": "Webサイト制作",
+      "description": "新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。",
+      "imageFile": "web-production"
+    },
+    {
+      "title": "Webサイト運用",
+      "description": "サイトの更新作業や独自のアクセス解析に基づいたサイト改善のご提案をいたします。",
+      "imageFile": "web-operation"
+    },
+    {
+      "title": "アプリ開発",
+      "description": "スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリの開発が可能です。",
+      "imageFile": "app-development"
+    }
+  ]
+}
