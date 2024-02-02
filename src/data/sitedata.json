@@ -8,6 +8,23 @@
     "recruit",
     "contact"
   ],
+  "newsData": [
+    {
+      "date": "2030.02.01",
+      "category": "お知らせ",
+      "title": "Webデザインニュースサイト「ウェブマガジン」に取材いただきました"
+    },
+    {
+      "date": "2030.01.25",
+      "category": "制作実績",
+      "title": "Smoothiesta様のWebサイトを制作いたしました"
+    },
+    {
+      "date": "2030.01.20",
+      "category": "採用",
+      "title": "Webデザイナーを1名募集中です！"
+    }
+  ],
   "serviceData": [
     {
       "title": "Webサイト制作",

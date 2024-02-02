@@ -21,18 +21,19 @@ block mainContent
       span(lang="en") Scroll
 
   //- News
-  section.p-indexSection.-news
-    .l-container.-sm
-      .p-news
-        .p-news__header
-          +primaryTitle('News', 'お知らせ')
-        .p-news__body
-          ul.p-newsList
+  section.p-indexSection
+    .l-container.p-indexNews
+      .p-indexNews__header
+        +primaryTitle('News', 'お知らせ')
+      .p-indexNews__body
+        ul.p-newsList
+          each news in newsData
             li.p-newsList__item
               a(href="#").p-newsList__link
-                time.p-newsList__date 2030.02.01
-                span.p-newsList__label お知らせ
-                p.p-newsList__title Webデザインニュースサイト「ウェブマガジン」に取材いただきました
+                .p-newsList__meta
+                  time.p-newsList__date #{news.date}
+                  span.p-newsList__label #{news.category}
+                p.p-newsList__title #{news.title}
 
   //- Service
   section.p-indexSection
