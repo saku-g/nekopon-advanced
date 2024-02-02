@@ -1,0 +1,52 @@
+@use "../../global/" as *;
+
+.p-hamburger {
+  --size: 40px;
+
+  display: inline-flex;
+  position: relative;
+  z-index: calc(var(--z-index-global-nav) + 1);
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+
+  @include mq(md) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 1px);
+    width: 30px;
+    height: 2px;
+    transition-property: transform, box-shadow;
+    transition-duration: 0.3s, 0.1s;
+    transition-timing-function: ease-out, linear;
+    border-radius: 2px;
+    background-color: var(--base-color);
+  }
+
+  &::before {
+    transform: translateY(-7px);
+    box-shadow: 0 7px 0 var(--base-color);
+  }
+
+  &::after {
+    transform: translateY(7px);
+  }
+
+  // DrawerActive
+  // -------------------------
+  .is-drawerActive &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  .is-drawerActive &::after {
+    transform: rotate(-45deg);
+  }
+}

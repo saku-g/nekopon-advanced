@@ -6,4 +6,35 @@
   padding: 1rem;
   border: none;
   appearance: none;
+  line-height: 1.5;
+
+  // Primary
+  // -------------------------
+  &.-primary {
+    position: relative;
+    min-width: 220px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background: linear-gradient(to right, var(--gradient-color));
+    color: var(--base-color);
+    font-size: rem(14);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::after {
+      content: "\f0da";
+      position: absolute;
+      right: 20px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+  }
+
+  // Reverse
+  // -------------------------
+  &.-reverse {
+    border-color: currentcolor;
+    background: transparent;
+  }
 }

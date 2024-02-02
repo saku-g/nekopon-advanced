@@ -1,26 +1,33 @@
 @use "../../global/" as *;
 
+.p-header {
+  position: fixed;
+  z-index: var(--z-index-header);
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
 .p-header__inner {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-block: rem(20);
+  justify-content: space-between;
+  padding: rem(12) 15px;
 
   @include mq(md) {
-    padding-block: rem(50);
+    padding: rem(30) min(calc(30 / var(--pc-comp-width) * 100%), 30px);
   }
 }
 
-.p-header__logo {
-  margin: 0;
+.p-header__title {
   line-height: 1;
 }
 
-.p-header__logoLink {
+.p-header__logo {
   display: block;
-  width: 200px;
-}
 
-.p-header__logoImg {
-  width: 100%;
+  svg {
+    width: fluid(120, 160, var(--sp-comp-width), var(--pc-comp-width));
+    height: fluid(13, 17, var(--sp-comp-width), var(--pc-comp-width));
+  }
 }

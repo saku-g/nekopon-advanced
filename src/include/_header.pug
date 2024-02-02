@@ -7,13 +7,10 @@ header.l-site__header.p-header
           use(href="#logo")
     nav.p-header__nav
       h2.u-visuallyHidden サイト内メニュー
-      button(type="button").p-hamburger
-        svg
-          title メニュー
-          rect(y="0" width="30" height="2" rx="1" ry="1")
-          rect(y="7" width="30" height="2" rx="1" ry="1")
-          rect(y="14" width="30" height="2" rx="1" ry="1")
-      ul.p-globalNav
-        each val, index in navigation
-          if index !== 0
-            li.p-globalNav__item: a(href=`/${val}/`).p-globalNav__link=val
+      button(type="button" aria-expanded="false" aria-controls="drawer").p-hamburger#js-menuButton
+        span.u-visuallyHidden メニュー
+      .p-globalNav#drawer
+        ul.p-globalNav__list
+          each val, index in navigation
+            if index !== 0
+              li.p-globalNav__item: a(href=`/${val}/`).p-globalNav__link=val

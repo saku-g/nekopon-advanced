@@ -11,15 +11,14 @@ block append config
 block mainContent
   //- hero
   .p-hero
-    .p-hero__inner
-      .p-hero__body
-        p(lang="en")
-          span.u-inline-block Web Design
-          span.u-inline-block Specialist
-        p お客様の夢を叶える<br aria-hidden="true">Webサイトを制作
-        +primaryButton("/contact/", '-secondary', "contact")
-      .p-hero__scroll
-        span(lang="en") Scroll
+    .p-hero__body
+      p.p-hero__copy(lang="en")
+        | Web Design <br aria-hidden="true" class="lg:u-none"> Specialist
+      p.p-hero__subCopy お客様の夢を叶える<br class="md:u-none" aria-hidden="true">Webサイトを制作
+      p.p-hero__button
+        +primaryButton("/contact/", '-primary -reverse', "contact")
+    .p-hero__scroll
+      span(lang="en") Scroll
 
   //- News
   section.p-indexSection.-news
