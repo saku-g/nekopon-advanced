@@ -56,7 +56,7 @@ block mainContent
         +primaryButton()
 
   //- Works
-  section.p-indexSection
+  section.p-indexSection.-works
     .p-indexWorks
       .l-container.-lg
         .p-indexWorks__inner
@@ -84,21 +84,35 @@ block mainContent
                         )
 
   //- Company
-  section.p-indexSection
+  section.p-company
     .l-container
-      .p-company
-        +primaryTitle('Company', '私たちについて')
-        p.p-company__copy: strong サイトのゴール = 夢を叶えること
-        p お客様の夢を叶えること。それがWebサイトのゴールであり、私たちが目指すことです。だからこそちゃんと成果を出すサイトを全力でお作りします。お客様の笑顔を見たい。夢を実現する手助けをさせてください。
-      +primaryButton()
+      +primaryTitle('Company', '私たちについて')
+      p.p-company__copy: strong
+        span.u-inline-block サイトのゴール =&nbsp;
+        span.u-inline-block 夢を叶えること
+      p.u-text-center.u-mt-8 お客様の夢を叶えること。<br>それがWebサイトのゴールであり、<br aria-hidden="true">私たちが目指すことです。<br>だからこそちゃんと成果を出すサイトを<br aria-hidden="true">全力でお作りします。<br>お客様の笑顔を見たい。<br aria-hidden="true">夢を実現する手助けをさせてください。
+      .p-indexSection__button
+        +primaryButton()
+    figure.p-company__imgWrapper
+      picture
+        source(
+          type="image/png"
+          srcset="/src/assets/img/company/bg_circle_sp.png 1x, /src/assets/img/company/bg_circle_sp@2x.png 2x"
+          width="375"
+          height="576"
+          media="(max-width: 767px)"
+        )
+        img(src="/src/assets/img/company/bg_company.png", alt="" srcset="/src/assets/img/company/bg_company.png 1x, /src/assets/img/company/bg_company@2x.png 2x")
+
 
   //- Recruit
-  section.p-indexSection
+  section.p-indexSection.-recruit
     .l-container
       .p-indexRecruit
         .p-indexRecruit__body
           +primaryTitle('Recruit', '採用情報')
           p 私たちと一緒に働きませんか？
-          +primaryButton()
+          .p-indexSection__button
+            +primaryButton()
         figure.p-indexRecruit__imgWrapper
-          img(src="/src/assets/img/top/recruit.jpg", alt="", srcset="")
+          img(src="/src/assets/img/top/recruit.jpg", alt="", srcset="/src/assets/img/top/recruit.jpg 1x, /src/assets/img/top/recruit@2x.jpg 2x")

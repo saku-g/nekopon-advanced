@@ -1,0 +1,35 @@
+@use "../../global/" as *;
+
+.p-company {
+  position: relative;
+  max-width: calc(var(--lg-content-width) * 1px);
+  margin-inline: auto;
+  padding-block: fluid(60, 100, var(--sp-comp-width), var(--pc-comp-width));
+}
+
+.p-company__copy {
+  font-size: rem(32);
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+
+  span {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5em;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: -0.25em;
+    text-decoration-skip-ink: none;
+  }
+}
+
+.p-company__imgWrapper {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

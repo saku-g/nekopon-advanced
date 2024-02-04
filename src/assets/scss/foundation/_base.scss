@@ -32,11 +32,15 @@ body {
   background-color: var(--base-color);
   color: var(--text-color);
   font-family: var(--font-base);
-  font-size: rem(15);
+  font-size: rem(14);
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.05em;
   line-height: 1.8;
   text-rendering: optimizelegibility;
+
+  @include mq(md) {
+    font-size: rem(15);
+  }
 }
 
 ul {

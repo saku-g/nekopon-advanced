@@ -3,6 +3,18 @@
 .p-indexSection {
   position: relative;
   padding-block: fluid(40, 70, var(--sp-comp-width), var(--pc-comp-width));
+
+  &.-works {
+    padding-bottom: 0;
+
+    @include mq(md) {
+      padding-bottom: rem(40);
+    }
+  }
+
+  &.-recruit {
+    padding-top: 0;
+  }
 }
 
 .p-indexSection__button {

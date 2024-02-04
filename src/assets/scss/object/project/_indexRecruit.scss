@@ -1,0 +1,41 @@
+@use "../../global/" as *;
+
+.p-indexRecruit {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-color-1);
+
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+.p-indexRecruit__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: rem(70);
+
+  @include mq(md) {
+    width: calc(444 / var(--md-content-width) * 100%);
+  }
+}
+
+.p-indexRecruit__imgWrapper {
+  order: -1;
+  height: min(calc(200 / var(--sp-comp-width) * 100vw), 280px);
+
+  @include mq(md) {
+    flex: 1;
+    order: 1;
+    width: calc(666 / var(--md-content-width) * 100%);
+    height: auto;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
