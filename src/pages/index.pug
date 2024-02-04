@@ -57,24 +57,31 @@ block mainContent
 
   //- Works
   section.p-indexSection
-    .l-container.-lg
-      .p-indexWorks
-        .p-indexWorks__body
-          +primaryTitle('Works', '制作実績')
-          p 様々なジャンルのWebサイト制作が可能です。<br aria-hidden="true">ご購入やお申込み数の増加などを実現します！
-        .p-indexWorks__slider
-          .splide(aria-label="制作実績の画像一覧")
-            .splide__track
-              ul.splide__list
-                each fileName in ['smoothiesta', 'web-conference', 'lamina']
-                  li.splide__slide
-                    figure
-                      img(
-                        src=`/src/assets/img/works/${fileName}.jpg`,
-                        alt="",
-                        srcset=`/src/assets/img/works/${fileName}.jpg 1x, /src/assets/img/works/${fileName}@2x.jpg 2x`
-                      )
-        +primaryButton()
+    .p-indexWorks
+      .l-container.-lg
+        .p-indexWorks__inner
+          .p-indexWorks__body
+            +primaryTitle('Works', '制作実績')
+            p.u-text-center 様々なジャンルのWebサイト制作が可能です。<br aria-hidden="true">ご購入やお申込み数の増加などを実現します！
+            .p-indexSection__button
+              +primaryButton()
+          .p-indexWorks__slider
+            .splide#js-worksSlider(aria-label="制作実績の画像一覧")
+              .splide__arrows
+                button(type="button" class="splide__arrow splide__arrow--prev")
+                  <i class="fa-solid fa-chevron-left"></i>
+                button(type="button" class="splide__arrow splide__arrow--next")
+                  <i class="fa-solid fa-chevron-right"></i>
+              .splide__track
+                ul.splide__list
+                  each fileName in ['smoothiesta', 'web-conference', 'lamina']
+                    li.splide__slide
+                      figure
+                        img(
+                          src=`/src/assets/img/works/${fileName}.jpg`,
+                          alt="",
+                          srcset=`/src/assets/img/works/${fileName}.jpg 1x, /src/assets/img/works/${fileName}@2x.jpg 2x`
+                        )
 
   //- Company
   section.p-indexSection

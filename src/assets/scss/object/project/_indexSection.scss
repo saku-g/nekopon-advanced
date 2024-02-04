@@ -1,6 +1,7 @@
 @use "../../global/" as *;
 
 .p-indexSection {
+  position: relative;
   padding-block: fluid(40, 70, var(--sp-comp-width), var(--pc-comp-width));
 }
 
