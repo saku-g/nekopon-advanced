@@ -13,7 +13,9 @@
   }
 
   &.-recruit {
-    padding-top: 0;
+    @include mq(md, $not: true) {
+      padding-block: 0;
+    }
   }
 }
 

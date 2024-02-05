@@ -1,0 +1,19 @@
+// Text
+// テキスト関連のユーティリティクラス
+// -----------------------------------
+
+@use "../../global/" as *;
+
+// Align
+// -------------------------
+.u-overflow-visible {
+  overflow: visible;
+}
+
+.u-overflow-auto {
+  overflow: auto;
+}
+
+.u-overflow-hidden {
+  overflow: hidden;
+}
