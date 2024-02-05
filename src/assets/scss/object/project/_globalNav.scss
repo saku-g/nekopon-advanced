@@ -76,3 +76,11 @@
     opacity: 1;
   }
 }
+
+// Resize
+// -------------------------
+.is-resize {
+  .p-globalNav {
+    transition: none;
+  }
+}
