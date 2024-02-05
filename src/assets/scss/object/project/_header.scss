@@ -5,6 +5,7 @@
   z-index: var(--z-index-header);
   top: 0;
   width: 100%;
+  transition: background 0.3s linear;
   background-color: transparent;
 }
 
@@ -13,6 +14,7 @@
   align-items: center;
   justify-content: space-between;
   padding: rem(12) 15px;
+  transition: padding 0.3s var(--easing);
 
   @include mq(md) {
     padding: rem(30) min(calc(30 / var(--pc-comp-width) * 100%), 30px);
@@ -29,5 +31,17 @@
   svg {
     width: fluid(120, 160, var(--sp-comp-width), var(--pc-comp-width));
     height: fluid(13, 17, var(--sp-comp-width), var(--pc-comp-width));
+  }
+}
+
+// is-scrolled
+// -------------------------
+.p-header.is-scrolled {
+  background-color: var(--main-color-dark);
+
+  @include mq(md) {
+    .p-header__inner {
+      padding-block: rem(20);
+    }
   }
 }

@@ -11,6 +11,7 @@
   --size: 50px;
 
   display: inline-flex;
+  visibility: hidden;
   position: fixed;
   right: var(--position);
   bottom: var(--position);
@@ -18,12 +19,23 @@
   justify-content: center;
   width: var(--size);
   height: var(--size);
+  transform: translateY(15px);
+  transition-property: opacity, visibility, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: var(--easing);
   border-radius: 50%;
+  opacity: 0;
   background-color: var(--base-color);
   box-shadow: 0 0 8px 2px rgb(0 0 0 / 10%);
 
   @include mq(md) {
     --position: 45px;
+  }
+
+  .is-heroOver & {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
