@@ -6,27 +6,21 @@
 }
 
 .p-breadcrumb__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  column-gap: rem(8);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .p-breadcrumb__item {
+  display: inline;
+  font-size: rem(12);
   text-transform: uppercase;
-
-  a {
-    color: var(--main-color);
-
-    @include hover {
-      text-decoration: underline;
-    }
-  }
 
   &:not(&.is-current) {
     display: inline-flex;
     align-items: center;
-    column-gap: rem(8);
+    margin-right: 8px;
+    column-gap: 8px;
 
     &::after {
       content: "\f054";

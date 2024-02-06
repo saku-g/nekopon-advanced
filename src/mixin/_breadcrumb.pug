@@ -6,7 +6,6 @@ mixin breadcrumb(...items)
         each item, index in items
           if (index + 1 !== items.length)
             li.p-breadcrumb__item
-              a= item
+              a(href=`/${item}`)= item
           else
-            li.p-breadcrumb__item.is-current
-              span= item
+            li.p-breadcrumb__item.is-current= item

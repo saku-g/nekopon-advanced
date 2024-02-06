@@ -54,6 +54,15 @@ ul {
 a {
   text-decoration: none;
   cursor: pointer;
+
+  &:not([class]) {
+    color: var(--main-color);
+    text-decoration: none;
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 button {
