@@ -16,7 +16,8 @@ include ../mixin/_breadcrumb
 block mainContent
   +breadcrumb('news')
   .p-section
-    .p-newsListWrapper
+    .l-container
+      .p-news
         ul.p-newsList
           each news in newsData
             li.p-newsList__item
@@ -38,3 +39,12 @@ block mainContent
                     time.p-newsList__date 2030.01.14
                     span.p-newsList__label お知らせ
                   p.p-newsList__title テキストが入りますテキストが入りますテキストが入りますテキストが入ります
+        .p-news__pagination
+          nav(aria-label="ページネーション").p-pagination
+            ol.p-pagination__list
+              li.p-pagination__item
+                span.p-pagination__number.is-current 1
+              li.p-pagination__item
+                a(href="#").p-pagination__number 2
+              li.p-pagination__item
+                a(href="#").p-pagination__number 3

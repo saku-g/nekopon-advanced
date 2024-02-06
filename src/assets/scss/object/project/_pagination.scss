@@ -1,0 +1,40 @@
+@use "../../global/" as *;
+
+.p-pagination__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.p-pagination__number {
+  --size: 2.8125rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+  transition-property: background-position, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, var(--gradient-color));
+  background-position: left center;
+  background-size: 200% auto;
+  color: var(--base-color);
+  font-size: rem(20);
+  font-weight: 700;
+
+  &.is-current {
+    background: #f1ebf8;
+    color: currentcolor;
+  }
+
+  &:not(.is-current) {
+    @include hover {
+      opacity: 0.9;
+      background-position: right center;
+    }
+  }
+}

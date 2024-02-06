@@ -1,0 +1,10 @@
+@use "../../global/" as *;
+
+.p-news {
+  max-width: 750px;
+  margin-inline: auto;
+}
+
+.p-news__pagination {
+  margin-top: rem(40);
+}
