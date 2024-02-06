@@ -4,6 +4,7 @@ block append config
   -
     const page = {
       title: newsData[0].title,
+      titleEn: 'news',
       description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの最新情報です。'
     };
 
@@ -12,8 +13,8 @@ include ../mixin/_breadcrumb
 include ../mixin/_hero
 
 block mainContent
-  +hero('News', 'お知らせ', false)
-  +breadcrumb('news', page.title)
+  +hero(page.titleEn, 'お知らせ', false)
+  +breadcrumb(page.titleEn, page.title)
   .p-section
     .l-container
       .p-post

@@ -1,0 +1,28 @@
+@use "../../global/" as *;
+
+.p-works {
+  @include hover {
+    .p-works__title {
+      text-decoration: underline;
+    }
+
+    .p-works__imgWrapper img {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.p-works__title {
+  margin-top: rem(15);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.p-works__imgWrapper {
+  aspect-ratio: 350/238;
+  overflow: hidden;
+
+  img {
+    transition: transform 0.2s var(--easing);
+  }
+}

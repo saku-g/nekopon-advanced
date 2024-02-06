@@ -4,6 +4,7 @@ block append config
   -
     const page = {
       title: '事業内容',
+      titleEn: 'service',
       description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの事業内容です。'
     };
 
@@ -13,8 +14,8 @@ include ../mixin/_hero
 
 
 block mainContent
-  +hero('Service', page.title)
-  +breadcrumb('service')
+  +hero(page.titleEn, page.title)
+  +breadcrumb(page.titleEn)
   .p-section
     .l-container
       each data in serviceData

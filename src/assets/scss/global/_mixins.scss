@@ -56,7 +56,8 @@ $breakpoints: (
 
   // デスクトップ
   @media (hover: hover) and (pointer: fine) {
-    &:hover {
+    &:hover,
+    &:focus-visible {
       @content;
     }
   }

@@ -1,0 +1,56 @@
+extends ../layout/_main
+
+block append config
+  -
+    const page = {
+      title: '制作実績',
+      titleEn: 'works',
+      description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの事業内容です。'
+    };
+
+//- Mixin
+include ../mixin/_breadcrumb
+include ../mixin/_hero
+
+
+block mainContent
+  +hero(page.titleEn, page.title)
+  +breadcrumb(page.titleEn)
+  .p-section
+    .l-container
+      .u-overflow-hidden
+        .l-grid(data-gap="6")
+          -
+            const worksData = [
+              {
+                title: 'Smoothiesta',
+                fileName: 'smoothiesta',
+              },
+              {
+                title: 'Web Conference',
+                fileName: 'web-conference',
+              },
+              {
+                title: 'lamina',
+                fileName: 'lamina',
+              },
+              {
+                title: 'CITYLab',
+                fileName: 'citylab',
+              },
+              {
+                title: 'TABILOG',
+                fileName: 'tabilog',
+              },
+            ]
+          each item in worksData
+            section.l-grid__item(data-col="12 sm:6 lg:4")
+              a(href="#").c-card.p-works
+                .c-card__body
+                  h2.p-works__title= `${item.title} 様`
+                figure.c-card__imgWrapper.p-works__imgWrapper
+                  img(
+                    src=`/src/assets/img/works/${item.fileName}.jpg`,
+                    alt="",
+                    srcset=`/src/assets/img/works/${item.fileName}.jpg 1x, /src/assets/img/works/${item.fileName}@2x.jpg 2x`
+                  )
