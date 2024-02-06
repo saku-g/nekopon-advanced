@@ -12,7 +12,7 @@ include ../mixin/_breadcrumb
 include ../mixin/_hero
 
 block mainContent
-  +hero('News', 'お知らせ')
+  +hero('News', page.title)
   +breadcrumb('news')
   .p-section
     .l-container

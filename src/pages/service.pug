@@ -1,0 +1,30 @@
+extends ../layout/_main
+
+block append config
+  -
+    const page = {
+      title: '事業内容',
+      description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの事業内容です。'
+    };
+
+//- Mixin
+include ../mixin/_breadcrumb
+include ../mixin/_hero
+
+
+block mainContent
+  +hero('Service', page.title)
+  +breadcrumb('service')
+  .p-section
+    .l-container
+      each data in serviceData
+        section.c-card.p-service.-horizontal
+          .c-card__body.p-service__body
+            h3.p-service__title #{data.title}
+            p.p-service__text #{data.description.service}
+          figure.c-card__imgWrapper.p-service__imgWrapper
+            img(
+              src=`/src/assets/img/service/${data.imageFile}.jpg`,
+              alt="",
+              srcset=`/src/assets/img/service/${data.imageFile}.jpg 1x, /src/assets/img/service/${data.imageFile}@2x.jpg 2x`
+            )
