@@ -1,0 +1,40 @@
+extends ../layout/_main
+
+block append config
+  -
+    const page = {
+      title: {
+        en: 'News',
+        ja: 'お知らせ'
+      },
+      description: `新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの最新情報です。`,
+    };
+
+//- Mixin
+include ../mixin/_breadcrumb
+
+block mainContent
+  +breadcrumb('news')
+  .p-section
+    .p-newsListWrapper
+        ul.p-newsList
+          each news in newsData
+            li.p-newsList__item
+              a(href="#").p-newsList__link
+                .p-newsList__meta
+                  time.p-newsList__date #{news.date}
+                  span.p-newsList__label #{news.category}
+                p.p-newsList__title #{news.title}
+          li.p-newsList__item
+            a(href="#").p-newsList__link
+              .p-newsList__meta
+                time.p-newsList__date 2030.01.15
+                span.p-newsList__label お知らせ
+              p.p-newsList__title （折り返しテキストの場合）テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+          - for (var i = 1; i < 16; i++)
+              li.p-newsList__item
+                a(href="#").p-newsList__link
+                  .p-newsList__meta
+                    time.p-newsList__date 2030.01.14
+                    span.p-newsList__label お知らせ
+                  p.p-newsList__title テキストが入りますテキストが入りますテキストが入りますテキストが入ります

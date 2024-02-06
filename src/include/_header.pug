@@ -13,4 +13,5 @@ header.l-site__header.p-header#js-header
         ul.p-globalNav__list
           each val, index in navigation
             if index !== 0
-              li.p-globalNav__item: a(href=`/${val}/`).p-globalNav__link=val
+              li.p-globalNav__item
+                a(href=`/${val}`).p-globalNav__link.u-hover-under=val

@@ -1,5 +1,10 @@
 @use "../../global/" as *;
 
+.p-newsListWrapper {
+  max-width: 750px;
+  margin-inline: auto;
+}
+
 .p-newsList {
   display: grid;
   row-gap: rem(30);
@@ -15,6 +20,12 @@
     flex-direction: row;
     align-items: baseline;
     gap: 20px;
+  }
+
+  @include hover {
+    .p-newsList__title {
+      text-decoration: underline;
+    }
   }
 }
 

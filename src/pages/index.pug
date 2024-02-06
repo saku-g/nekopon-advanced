@@ -10,7 +10,7 @@ block append config
 
 block mainContent
   //- hero
-  .p-hero#js-hero
+  .p-hero.-index#js-hero
     .p-hero__body
       p.p-hero__copy(lang="en")
         | Web Design <br aria-hidden="true" class="lg:u-none"> Specialist
@@ -21,7 +21,7 @@ block mainContent
       span(lang="en") Scroll
 
   //- News
-  section.p-indexSection
+  section.p-section
     .l-container.p-indexNews
       .p-indexNews__header
         +primaryTitle('News', 'お知らせ')
@@ -36,7 +36,7 @@ block mainContent
                 p.p-newsList__title #{news.title}
 
   //- Service
-  section.p-indexSection
+  section.p-section
     .l-container
       +primaryTitle('Service', '事業内容')
       .u-overflow-hidden
@@ -53,18 +53,18 @@ block mainContent
                     alt="",
                     srcset=`/src/assets/img/service/${service.imageFile}.jpg 1x, /src/assets/img/service/${service.imageFile}@2x.jpg 2x`
                   )
-      .p-indexSection__button
+      .p-section__button
         +primaryButton()
 
   //- Works
-  section.p-indexSection.-works
+  section.p-section.-works
     .p-indexWorks
       .l-container.-lg
         .p-indexWorks__inner
           .p-indexWorks__body
             +primaryTitle('Works', '制作実績')
             p.u-text-center 様々なジャンルのWebサイト制作が可能です。<br aria-hidden="true">ご購入やお申込み数の増加などを実現します！
-            .p-indexSection__button
+            .p-section__button
               +primaryButton()
           .p-indexWorks__slider
             .splide#js-worksSlider(aria-label="制作実績の画像一覧")
@@ -92,7 +92,7 @@ block mainContent
         span.u-inline-block サイトのゴール =&nbsp;
         span.u-inline-block 夢を叶えること
       p.u-text-center.u-mt-8 お客様の夢を叶えること。<br>それがWebサイトのゴールであり、<br aria-hidden="true">私たちが目指すことです。<br>だからこそちゃんと成果を出すサイトを<br aria-hidden="true">全力でお作りします。<br>お客様の笑顔を見たい。<br aria-hidden="true">夢を実現する手助けをさせてください。
-      .p-indexSection__button
+      .p-section__button
         +primaryButton()
     figure.p-company__imgWrapper
       picture
@@ -107,13 +107,13 @@ block mainContent
 
 
   //- Recruit
-  section.p-indexSection.-recruit
+  section.p-section.-recruit
     .l-container
       .p-indexRecruit
         .p-indexRecruit__body
           +primaryTitle('Recruit', '採用情報')
           p 私たちと一緒に働きませんか？
-          .p-indexSection__button
+          .p-section__button
             +primaryButton()
         figure.p-indexRecruit__imgWrapper
           img(src="/src/assets/img/top/recruit.jpg", alt="", srcset="/src/assets/img/top/recruit.jpg 1x, /src/assets/img/top/recruit@2x.jpg 2x")

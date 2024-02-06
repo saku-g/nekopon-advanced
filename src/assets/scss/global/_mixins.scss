@@ -44,11 +44,13 @@ $breakpoints: (
 // See: https://developer.mozilla.org/ja/docs/Web/CSS/@media/hover
 // See: https://qiita.com/gilly/items/546adecd18a8db3fd059
 
-@mixin hover() {
-  // スマートフォン・タブレット
-  @media (hover: none) and (any-pointer: coarse) {
-    &:active {
-      @content;
+@mixin hover($active: true) {
+  @if $active {
+    // スマートフォン・タブレット
+    @media (hover: none) and (any-pointer: coarse) {
+      &:active {
+        @content;
+      }
     }
   }
 

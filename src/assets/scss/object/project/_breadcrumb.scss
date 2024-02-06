@@ -1,0 +1,39 @@
+@use "../../global/" as *;
+
+.p-breadcrumb {
+  padding-block: rem(5);
+  background-color: var(--gray-color-1);
+}
+
+.p-breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: rem(8);
+}
+
+.p-breadcrumb__item {
+  text-transform: uppercase;
+
+  a {
+    color: var(--main-color);
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  &:not(&.is-current) {
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(8);
+
+    &::after {
+      content: "\f054";
+      color: var(--text-color);
+      font-family: "Font Awesome 5 Free";
+      font-size: 0.5rem;
+      font-weight: 900;
+    }
+  }
+}

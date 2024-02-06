@@ -1,0 +1,12 @@
+mixin breadcrumb(...items)
+  nav.p-breadcrumb
+    .l-container
+      ul.p-breadcrumb__list
+        li.p-breadcrumb__item: a Home
+        each item, index in items
+          if (index + 1 !== items.length)
+            li.p-breadcrumb__item
+              a= item
+          else
+            li.p-breadcrumb__item.is-current
+              span= item

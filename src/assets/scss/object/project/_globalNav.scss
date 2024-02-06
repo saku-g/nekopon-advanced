@@ -58,7 +58,7 @@
     inset: auto 0 -4px;
   }
 
-  @include hover {
+  @include hover($active: false) {
     &::after {
       transform: scaleX(1);
       transform-origin: left bottom;
