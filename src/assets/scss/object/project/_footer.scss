@@ -32,10 +32,21 @@
     --position: 45px;
   }
 
+  // heroセクションを通り過ぎたら表示
   .is-heroOver & {
     visibility: visible;
     transform: translateY(0);
     opacity: 1;
+  }
+
+  .fa-arrow-up {
+    transition: transform 0.15s var(--easing);
+  }
+
+  @include hover {
+    .fa-arrow-up {
+      transform: translateY(-3px);
+    }
   }
 }
 
