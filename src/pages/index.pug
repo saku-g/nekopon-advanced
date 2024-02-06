@@ -65,7 +65,7 @@ block mainContent
             +primaryTitle('Works', '制作実績')
             p.u-text-center 様々なジャンルのWebサイト制作が可能です。<br aria-hidden="true">ご購入やお申込み数の増加などを実現します！
             .p-section__button
-              +primaryButton()
+              +primaryButton('/works')
           .p-indexWorks__slider
             .splide#js-worksSlider(aria-label="制作実績の画像一覧")
               .splide__arrows
@@ -93,7 +93,7 @@ block mainContent
         span.u-inline-block 夢を叶えること
       p.u-text-center.u-mt-8 お客様の夢を叶えること。<br>それがWebサイトのゴールであり、<br aria-hidden="true">私たちが目指すことです。<br>だからこそちゃんと成果を出すサイトを<br aria-hidden="true">全力でお作りします。<br>お客様の笑顔を見たい。<br aria-hidden="true">夢を実現する手助けをさせてください。
       .p-section__button
-        +primaryButton()
+        +primaryButton('/company')
     figure.p-company__imgWrapper
       picture
         source(
@@ -114,6 +114,6 @@ block mainContent
           +primaryTitle('Recruit', '採用情報')
           p 私たちと一緒に働きませんか？
           .p-section__button
-            +primaryButton()
+            +primaryButton('/recruit')
         figure.p-indexRecruit__imgWrapper
           img(src="/src/assets/img/top/recruit.jpg", alt="", srcset="/src/assets/img/top/recruit.jpg 1x, /src/assets/img/top/recruit@2x.jpg 2x")
