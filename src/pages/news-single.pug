@@ -1,0 +1,87 @@
+extends ../layout/_main
+
+block append config
+  -
+    const page = {
+      title: newsData[0].title,
+      description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの最新情報です。'
+    };
+
+//- Mixin
+include ../mixin/_breadcrumb
+include ../mixin/_hero
+
+block mainContent
+  +hero('News', 'お知らせ', false)
+  +breadcrumb('news', page.title)
+  .p-section
+    .l-container
+      .p-post
+        article.p-post__article
+          .p-post__header
+            h1.p-post__title= page.title
+            .p-post__meta
+              time.p-post__date= newsData[0].date
+              span.p-post__label= newsData[0].category
+            figure.p-post__imgWrapper
+              img(src="/src/assets/img/news/news-article.jpg" alt="" srcset="/src/assets/img/news/news-article.jpg 1x, /src/assets/img/news/news-article@2x.jpg 2x")
+          .p-post__body
+            p テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+            h2 大見出し
+            p テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+            h3 小見出し
+            p テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+            p テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+        aside.p-post__share
+          ul.p-post__shareList
+            li
+              .
+                <div id="fb-root"></div>
+                <script
+                  async
+                  defer
+                  crossorigin="anonymous"
+                  src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v12.0"
+                  nonce="l8bnbbly"
+                ></script>
+                <div
+                  class="fb-like"
+                  data-action="like"
+                  data-href="https://example.com"
+                  data-layout="button_count"
+                  data-size="large"
+                  data-share="true"
+                ></div>
+            li
+              .
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            li
+              .
+                <a href="https://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="30" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            li
+                .
+                  <div
+                    class="line-it-button"
+                    data-lang="ja"
+                    data-type="share-b"
+                    data-env="REAL"
+                    data-url="http://sakucode.com/barber"
+                    data-color="default"
+                    data-size="small"
+                    data-count="false"
+                    data-ver="3"
+                    style="display: none"
+                  ></div>
+                  <script
+                    src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js"
+                    async="async"
+                    defer="defer"
+                  ></script>
+        nav.p-post__nav
+          ul.l-grid
+            li.l-grid__item(data-col="6")
+              a(href="#") Web Conference様のサイトを制作いたしました
+            li.l-grid__item(data-col="6")
+              a(href="#") プライバシーマーク取得のお知らせ
+        p.p-post__backToIndex
+          a(href="/news") News一覧

@@ -3,17 +3,16 @@ extends ../layout/_main
 block append config
   -
     const page = {
-      title: {
-        en: 'News',
-        ja: 'お知らせ'
-      },
-      description: `新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの最新情報です。`,
+      title: 'お知らせ',
+      description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの最新情報です。'
     };
 
 //- Mixin
 include ../mixin/_breadcrumb
+include ../mixin/_hero
 
 block mainContent
+  +hero('News', 'お知らせ')
   +breadcrumb('news')
   .p-section
     .l-container
@@ -21,7 +20,7 @@ block mainContent
         ul.p-newsList
           each news in newsData
             li.p-newsList__item
-              a(href="#").p-newsList__link
+              a(href="/news-single").p-newsList__link
                 .p-newsList__meta
                   time.p-newsList__date #{news.date}
                   span.p-newsList__label #{news.category}

@@ -1,0 +1,10 @@
+mixin hero(textEn, textJa, h1=true)
+  .p-hero#js-hero
+    if h1
+      h1.p-hero__title
+        span(lang="en")= textEn
+        span= textJa
+    else
+      p.p-hero__title
+        span(lang="en")= textEn
+        span= textJa
