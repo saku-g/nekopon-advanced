@@ -13,9 +13,12 @@
   &.-primary {
     position: relative;
     min-width: 220px;
+    transition: background-position 0.3s var(--easing);
     border: 1px solid transparent;
     border-radius: 50px;
-    background: linear-gradient(to right, var(--gradient-color));
+    background-image: linear-gradient(to right, var(--gradient-color));
+    background-position: left center;
+    background-size: 200% auto;
     color: var(--base-color);
     font-size: rem(14);
     font-weight: 700;
@@ -26,8 +29,17 @@
       content: "\f0da";
       position: absolute;
       right: 20px;
+      transition: right 0.3s var(--easing);
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
+    }
+
+    @include hover {
+      background-position: right center;
+
+      &::after {
+        right: 15px;
+      }
     }
   }
 
