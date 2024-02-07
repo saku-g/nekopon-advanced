@@ -1,0 +1,26 @@
+@use "../../global/" as *;
+
+.p-embed {
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.p-embed.-map {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+
+  iframe {
+    aspect-ratio: 345/240;
+  }
+}
+
+.p-embed.-movie {
+  iframe {
+    aspect-ratio: 345/194;
+  }
+}

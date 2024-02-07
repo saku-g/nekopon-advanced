@@ -1,0 +1,45 @@
+@use "../../global/" as *;
+
+.p-recruitWrapper {
+  background-image: url("/src/assets/img/recruit/bg.png");
+  background-repeat: repeat;
+  background-size: 50%;
+
+  @include mq(md) {
+    background-size: auto;
+  }
+}
+
+.p-recruit {
+  padding-top: fluid(60, 90, var(--sp-comp-width), var(--pc-comp-width));
+  text-align: center;
+}
+
+.p-recruit__copy {
+  color: var(--main-color);
+
+  span:lang(en) {
+    font-size: fluid(48, 72, var(--sp-comp-width), var(--pc-comp-width));
+    line-height: 1.2;
+  }
+
+  span:lang(en) + span {
+    display: block;
+    margin-top: rem(10);
+    font-size: fluid(18, 32, var(--sp-comp-width), var(--pc-comp-width));
+    font-weight: 400;
+  }
+}
+
+.p-recruit__text {
+  margin-top: rem(15);
+}
+
+.p-recruit__imgWrapper {
+  margin-top: rem(40);
+
+  img {
+    width: 100%;
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+  }
+}
