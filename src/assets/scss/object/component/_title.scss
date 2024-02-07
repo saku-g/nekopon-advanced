@@ -26,4 +26,16 @@
       font-size: rem(13);
     }
   }
+
+  // Secondary
+  // -------------------------
+  &.-secondary {
+    color: var(--main-color);
+    font-size: rem(24);
+    text-align: center;
+
+    @include mq(md) {
+      font-size: rem(32);
+    }
+  }
 }

@@ -1,0 +1,50 @@
+@use "../../global/" as *;
+
+.c-media {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+
+  & + & {
+    margin-top: rem(40);
+
+    @include mq(md) {
+      margin-top: rem(60);
+    }
+  }
+
+  @include mq(md) {
+    flex-direction: row;
+    column-gap: calc(50 / var(--md-content-width) * 100%);
+  }
+}
+
+.c-media__body {
+  @include mq(md) {
+    flex: 1;
+    margin-top: 0;
+  }
+}
+
+.c-media__title {
+  font-size: rem(18);
+  font-weight: 700;
+  text-align: center;
+
+  @include mq(md) {
+    font-size: rem(24);
+    text-align: left;
+  }
+}
+
+.c-media__imgWrapper {
+  order: -1;
+
+  @include mq(md) {
+    width: max(calc(445 / var(--md-content-width) * 100%), 340px);
+  }
+
+  img {
+    width: 100%;
+  }
+}

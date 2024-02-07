@@ -19,11 +19,11 @@ block mainContent
   .p-section
     .l-container
       each data in serviceData
-        section.c-card.p-service.-horizontal
-          .c-card__body.p-service__body
-            h3.p-service__title #{data.title}
-            p.p-service__text #{data.description.service}
-          figure.c-card__imgWrapper.p-service__imgWrapper
+        section.c-media
+          .c-media__body
+            h3.c-media__title #{data.title}
+            p.c-media__text.u-mt-3 #{data.description.service}
+          figure.c-media__imgWrapper
             img(
               src=`/src/assets/img/service/${data.imageFile}.jpg`,
               alt="",
