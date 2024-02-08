@@ -1,0 +1,13 @@
+@use "../../global/" as *;
+
+.p-skipLink {
+  position: absolute;
+  z-index: var(--z-index-skip-link);
+  padding: 0.5em 1em;
+  border-bottom: 1px solid var(--base-color);
+  background-color: var(--dark-color);
+  color: var(--base-color);
+  font-weight: 700;
+  text-align: center;
+  inset: 0 0 auto;
+}
