@@ -1,7 +1,7 @@
 @use "../../global/" as *;
 
 .p-news {
-  max-width: 750px;
+  max-width: calc(var(--sm-content-width) * 1px);
   margin-inline: auto;
 }
 

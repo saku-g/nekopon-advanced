@@ -22,6 +22,7 @@ html(lang="ja")
 
         block mainContent
 
-        include ../include/_contact
+        if page.titleEn !== 'contact'
+          include ../include/_contact
 
       include ../include/_footer

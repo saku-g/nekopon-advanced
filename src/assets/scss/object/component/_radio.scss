@@ -1,0 +1,28 @@
+@use "../../global/" as *;
+@use "../../global/" as *;
+
+.c-radio {
+  display: inline-flex;
+  align-items: center;
+  column-gap: rem(5);
+  cursor: pointer;
+}
+
+.c-radio__input {
+  --size: 0.8125rem;
+
+  box-sizing: border-box;
+  width: var(--size);
+  height: var(--size);
+  border: 1px solid var(--gray-color-3);
+  border-radius: 50%;
+  background-color: var(--base-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &:checked {
+    border-color: var(--main-color);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="%23391E88"/></svg>');
+  }
+}

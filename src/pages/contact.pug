@@ -1,0 +1,76 @@
+extends ../layout/_main
+
+block append config
+  -
+    const page = {
+      title: 'お問い合わせ',
+      titleEn: 'contact',
+      description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの最新情報です。'
+    };
+
+//- Mixin
+include ../mixin/_breadcrumb
+include ../mixin/_hero
+
+
+block mainContent
+  +hero(page.titleEn, page.title)
+  +breadcrumb(page.titleEn)
+  //- contact
+  .p-section
+    .l-container.-sm
+      p.u-text-center
+        span.u-inline-block Webサイトの制作のご依頼やお見積りなど、
+        span.u-inline-block お気軽にご相談ください。
+      div(class="p-form" action="#" method="post")
+        //- お問い合わせ種別
+        fieldset.p-form__item
+          legend.p-form__label お問い合わせ種別
+            span.p-form__required *必須
+          .p-form__field.-radio
+            -
+              const radioData = ["お仕事のご依頼・ご相談", 'お見積りのご依頼', '採用について', 'その他'];
+            each radio in radioData
+              label.c-radio
+                input(type="radio" name="inquiry-type" value=`${radio}` class="c-radio__input")
+                span.c-radio__label= radio
+        //- お名前
+        .p-form__item
+          label(class="p-form__label" for="your-name") お名前
+            span.p-form__required *必須
+          .p-form__field.-narrow
+            input(type="text" name="your-name" class="c-inputField" id="your-name")
+        //- 会社名
+        .p-form__item
+          label(class="p-form__label" for="company-name") 会社名
+            span.p-form__required *必須
+          .p-form__field.-narrow
+            input(type="text" name="company-name" class="c-inputField" id="company-name")
+        //- メールアドレス
+        .p-form__item
+          label(class="p-form__label" for="email") メールアドレス
+            span.p-form__required *必須
+          .p-form__field.-narrow
+            input(type="email" name="email" class="c-inputField" id="email")
+        //- 電話番号
+        .p-form__item
+          label(class="p-form__label" for="tel") 電話番号
+            span.u-text-xs （半角数字ハイフンなし）
+          .p-form__field.-narrow
+            input(type="tel" name="tel" class="c-inputField" id="tel")
+        //- お問い合わせ内容
+        .p-form__item
+          label(class="p-form__label" for="your-message") お問い合わせ内容
+          .p-form__field
+            textarea(name="your-message" placeholder="お問い合わせ内容を具体的にご記入くださいませ。" cols="80" rows="5" class="c-inputField" id="your-message")
+        //- お問い合わせ内容
+        .p-form__item
+          label(class="p-form__label" for="inflow") PON DESIGNをどちらでお知りになりましたか？
+            span.p-form__required *必須
+          .p-form__field.-narrow
+            select(name="inflow" class="c-inputField" id="inflow")
+              option(value="") 選択してください
+              each value in ['Google/Yahoo検索', 'SNS', 'ブログ', '友人や知人', 'その他']
+                option(value=`${value}`)= value
+        .u-text-center.u-mt-10
+          +primaryButton('#', '-primary', '送信する')
