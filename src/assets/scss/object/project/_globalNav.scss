@@ -41,29 +41,6 @@
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-
-  @include mq(md) {
-    font-size: rem(14);
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 1px;
-    transform: scaleX(0);
-    transform-origin: right bottom;
-    transition: transform 0.3s var(--easing);
-    background-color: currentcolor;
-    inset: auto 0 -4px;
-  }
-
-  @include hover($active: false) {
-    &::after {
-      transform: scaleX(1);
-      transform-origin: left bottom;
-    }
-  }
 }
 
 // DrawerActive

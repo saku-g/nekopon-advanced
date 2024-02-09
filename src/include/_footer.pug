@@ -4,6 +4,8 @@ footer.l-site__footer.p-footer
   .p-footer__nav
     ul.p-footer__navList
       each val, index in navigation
-        li.p-footer__navItem: a(href=`/${val}`).p-footer__navLink=val
+        li.p-footer__navItem
+          a(href=`/${val}`).p-footer__navLink.u-hover-underLine
+            span.u-hover-underLine__text= val
 
   p.p-footer__copyright: small(lang="en") &copy; Pon design
