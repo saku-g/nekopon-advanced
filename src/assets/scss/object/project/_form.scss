@@ -1,10 +1,6 @@
 @use "../../global/" as *;
 
 .p-form {
-  $_space: fluid(30, 90, var(--sp-comp-width), var(--pc-comp-width));
-
-  @debug $_space;
-
   margin-top: rem(30);
   padding: fluid(30, 90, var(--sp-comp-width), var(--pc-comp-width));
   padding-right: fluid(30, 60, var(--sp-comp-width), var(--pc-comp-width));

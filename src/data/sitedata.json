@@ -1,5 +1,9 @@
 {
-  "siteName": "PON Design",
+  "site": {
+    "name": "PON DESIGN",
+    "url": "https://saku-g.github.io/nekopon-advanced/"
+  },
+  "imgPath": "/assets/img/",
   "navigation": [
     "home",
     "news",

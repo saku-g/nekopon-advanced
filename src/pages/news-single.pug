@@ -5,7 +5,8 @@ block append config
     const page = {
       title: newsData[0].title,
       titleEn: 'news',
-      description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの最新情報です。'
+      description: '',
+      ogType: 'article'
     };
 
 //- Mixin
@@ -25,7 +26,7 @@ block mainContent
               time.p-post__date= newsData[0].date
               span.p-post__label= newsData[0].category
             figure.p-post__imgWrapper
-              img(src="/src/assets/img/news/news-article.jpg" alt="" srcset="/src/assets/img/news/news-article.jpg 1x, /src/assets/img/news/news-article@2x.jpg 2x")
+              img(src=`${imgPath}news/news-article.jpg` alt="" srcset=`${imgPath}news/news-article.jpg 1x, ${imgPath}news/news-article@2x.jpg 2x`)
           .p-post__body
             p テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
             h2 大見出し

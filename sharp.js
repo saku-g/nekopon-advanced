@@ -5,7 +5,7 @@ import sharp from 'sharp';
 
 // 画像処理を行い出力 dir.src -> dir.dest
 const dir = {
-  src: 'src/assets/img',
+  src: 'public/assets/img',
   dest: 'dist/assets/img',
 };
 
@@ -54,29 +54,26 @@ imageFiles.forEach((file) => {
   const outputPath = `${outputDir}/${path.basename(file)}`;
   const ext = path.extname(file).toLowerCase().replace('.', '');
 
-  // 出力先ファイルが存在しない場合、画像処理を行う
-  if (!fs.existsSync(outputPath)) {
-    switch (ext) {
-      case 'jpg':
-      case 'jpeg':
-        sharpFn(file, 'jpeg', 80, outputPath);
-        sharpFn(file, 'webp', 80, `${outputPath}.webp`);
-        sharpFn(file, 'avif', 80, `${outputPath}.avif`);
-        break;
-      case 'png':
-        sharpFn(file, 'png', 80, outputPath);
-        sharpFn(file, 'webp', 80, `${outputPath}.webp`);
-        sharpFn(file, 'avif', 80, `${outputPath}.avif`);
-        break;
-      case 'gif':
-        sharpFn(file, 'gif', 80, outputPath);
-        break;
-      case 'svg':
-        // svgは複製
-        fs.copyFileSync(file, outputPath);
-        console.log(`SVG image copied successfully: ${file}`);
-        console.log(`Output: ${outputPath}`);
-        break;
-    }
+  switch (ext) {
+    case 'jpg':
+    case 'jpeg':
+      sharpFn(file, 'jpeg', 80, outputPath);
+      sharpFn(file, 'webp', 80, `${outputPath}.webp`);
+      sharpFn(file, 'avif', 80, `${outputPath}.avif`);
+      break;
+    case 'png':
+      sharpFn(file, 'png', 80, outputPath);
+      sharpFn(file, 'webp', 80, `${outputPath}.webp`);
+      sharpFn(file, 'avif', 80, `${outputPath}.avif`);
+      break;
+    case 'gif':
+      sharpFn(file, 'gif', 80, outputPath);
+      break;
+    case 'svg':
+      // svgは複製
+      fs.copyFileSync(file, outputPath);
+      console.log(`SVG image copied successfully: ${file}`);
+      console.log(`Output: ${outputPath}`);
+      break;
   }
 });

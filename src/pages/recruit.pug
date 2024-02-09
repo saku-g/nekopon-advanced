@@ -5,7 +5,7 @@ block append config
     const page = {
       title: '採用情報',
       titleEn: 'Recruit',
-      description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの最新情報です。'
+      description: '成果を出すサイトを全力で作るWeb制作会社PON DESIGNの採用情報です。私たちが制作において大切にしている価値観、募集職種、社内の様子について紹介します。'
     };
 
 //- Mixin
@@ -27,7 +27,7 @@ block mainContent
         p.p-recruit__text
           | 心を弾ましながら<br aria-hidden="true">夢いっぱいのサイトを作ろう！<br aria-hidden="true">お客様も自分もみんなが幸せになれるように
       figure.p-recruit__imgWrapper
-        img(src="/src/assets/img/recruit/recruit_hero.jpg", alt="" srcset="/src/assets/img/recruit/recruit_hero.jpg 1x, /src/assets/img/recruit/recruit_hero@2x.jpg 2x")
+        img(src=`${imgPath}recruit/recruit_hero.jpg`, alt="" srcset=`${imgPath}recruit/recruit_hero.jpg 1x, ${imgPath}recruit/recruit_hero@2x.jpg 2x`)
     section.p-section
       .l-container
         h2.c-title.-secondary 募集中の職種

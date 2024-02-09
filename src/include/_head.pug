@@ -2,17 +2,17 @@ meta(charset="UTF-8")
 //- meta(name="robots" content="noindex,nofollow")
 meta(name="viewport", content="width=device-width, initial-scale=1.0")
 meta(name="description", content=page.description)
-meta(property="og:url" content=page.url ? page.url : SITE_URL)
+meta(property="og:url" content=page.url ? page.url : site.url)
 meta(property="og:title" content=page.title)
 meta(property="og:description" content=page.description)
-meta(property="og:image" content=`${SITE_URL}ogp.jpg`)
+meta(property="og:image" content=`${site.url}ogp.jpg`)
 meta(property="og:type" content=page.ogType ? page.ogType : 'website')
 meta(property="og:locale" content="ja_JP")
-meta(property="og:site_name" content=SITE_NAME)
+meta(property="og:site_name" content=site.name)
 meta(name="twitter:card" content="summary_large_image")
-link(rel="canonical" href=SITE_URL)
+link(rel="canonical" href=site.url)
 -
-  const title = isTop ? page.title : `${page.title} | ${SITE_NAME}`;
+  const title = isTop ? page.title : `${page.title} | ${site.name}`;
 title=title
 //- Favicon
 link(rel="icon" type="image/svg+xml" href="/favicon.svg")

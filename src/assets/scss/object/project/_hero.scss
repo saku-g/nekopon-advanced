@@ -5,8 +5,8 @@
   place-items: center;
   position: relative;
   height: fluid(180, 240, var(--sp-comp-width), var(--pc-comp-width));
-  background-image: url("/src/assets/img/common/hero.jpg");
-  background-image: image-set(url("/src/assets/img/common/hero.jpg") 1x, url("/src/assets/img/common/hero@2x.jpg") 2x);
+  background-image: url("#{$img-path}common/hero.jpg");
+  background-image: image-set(url("#{$img-path}common/hero.jpg") 1x, url("#{$img-path}common/hero@2x.jpg") 2x);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

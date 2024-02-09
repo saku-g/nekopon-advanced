@@ -30,7 +30,9 @@
       position: absolute;
       right: 20px;
       transition: right 0.3s var(--easing);
+      /* stylelint-disable */
       font-family: "Font Awesome 5 Free";
+      /* stylelint-enable */
       font-weight: 900;
     }
 

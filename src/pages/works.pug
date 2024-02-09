@@ -5,7 +5,7 @@ block append config
     const page = {
       title: '制作実績',
       titleEn: 'works',
-      description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの事業内容です。'
+      description: '成果を出すサイトを全力で作るWeb制作会社PON DESIGNの制作実績です。BtoC向けのウェブサイトを中心に、業種を問わず幅広い制作実績があります。'
     };
 
 //- Mixin
@@ -50,7 +50,7 @@ block mainContent
                   h2.p-works__title= `${item.title} 様`
                 figure.c-card__imgWrapper.p-works__imgWrapper
                   img(
-                    src=`/src/assets/img/works/${item.fileName}.jpg`,
+                    src=`${imgPath}works/${item.fileName}.jpg`,
                     alt="",
-                    srcset=`/src/assets/img/works/${item.fileName}.jpg 1x, /src/assets/img/works/${item.fileName}@2x.jpg 2x`
+                    srcset=`${imgPath}works/${item.fileName}.jpg 1x, ${imgPath}works/${item.fileName}@2x.jpg 2x`
                   )

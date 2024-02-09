@@ -5,7 +5,7 @@ block append config
     const page = {
       title: '私たちについて',
       titleEn: 'Company',
-      description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの最新情報です。'
+      description: '成果を出すサイトを全力で作るWeb制作会社PON DESIGNの企業情報です。私たちが大切にしている価値観、代表メッセージ、会社概要、アクセスについて紹介します。'
     };
 
 //- Mixin
@@ -30,12 +30,12 @@ block mainContent
           picture
             source(
               type="image/png"
-              srcset="/src/assets/img/company/bg_circle_sp.png 1x, /src/assets/img/company/bg_circle_sp@2x.png 2x"
+              srcset=`${imgPath}company/bg_circle_sp.png 1x, ${imgPath}company/bg_circle_sp@2x.png 2x`
               width="375"
               height="576"
               media="(max-width: 767px)"
             )
-            img(src="/src/assets/img/company/bg_company.png", alt="" srcset="/src/assets/img/company/bg_company.png 1x, /src/assets/img/company/bg_company@2x.png 2x")
+            img(src=`${imgPath}company/bg_company.png`, alt="" srcset=`${imgPath}company/bg_company.png 1x, ${imgPath}company/bg_company@2x.png 2x`)
     //- ceoMessage
     .l-container
       .c-media
@@ -45,7 +45,7 @@ block mainContent
             p.u-mt-4 テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
             p.u-mt-4 代表取締役社長 猫山ポン太郎
         figure.c-media__imgWrapper
-          img(src="/src/assets/img/company/ceo.jpg", alt="" srcset="/src/assets/img/company/ceo.jpg 1x, /src/assets/img/company/ceo@2x.jpg 2x")
+          img(src=`${imgPath}company/ceo.jpg`, alt="" srcset=`${imgPath}company/ceo.jpg 1x, ${imgPath}company/ceo@2x.jpg 2x`)
   //- 会社概要
   section.p-section
     .l-container

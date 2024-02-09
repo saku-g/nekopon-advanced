@@ -1,4 +1,4 @@
-import { SetObserver } from './libs/setObserver';
+import { SetObserver } from './utils/setObserver';
 
 /**
  * ヒーローセクションが画面に表示されているかどうかを監視し、クラスを切り替えるコールバック関数

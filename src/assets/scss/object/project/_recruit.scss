@@ -1,7 +1,9 @@
 @use "../../global/" as *;
 
 .p-recruitWrapper {
-  background-image: url("/src/assets/img/recruit/bg.png");
+  margin-bottom: rem(-40);
+  padding-bottom: rem(40);
+  background-image: url("#{$img-path}recruit/bg.png");
   background-repeat: repeat;
   background-size: 50%;
 

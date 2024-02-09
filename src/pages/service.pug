@@ -5,7 +5,7 @@ block append config
     const page = {
       title: '事業内容',
       titleEn: 'service',
-      description: '新規サイト制作や運用、アプリ開発に強いWeb制作会社PON DESIGNの事業内容です。'
+      description: '成果を出すサイトを全力で作るWeb制作会社PON DESIGNの事業内容です。Webサイト制作・Webサイト運用・アプリ開発を提供しています。'
     };
 
 //- Mixin
@@ -25,7 +25,7 @@ block mainContent
             p.c-media__text.u-mt-3 #{data.description.service}
           figure.c-media__imgWrapper
             img(
-              src=`/src/assets/img/service/${data.imageFile}.jpg`,
+              src=`${imgPath}service/${data.imageFile}.jpg`,
               alt="",
-              srcset=`/src/assets/img/service/${data.imageFile}.jpg 1x, /src/assets/img/service/${data.imageFile}@2x.jpg 2x`
+              srcset=`${imgPath}service/${data.imageFile}.jpg 1x, ${imgPath}service/${data.imageFile}@2x.jpg 2x`
             )
