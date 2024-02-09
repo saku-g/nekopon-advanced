@@ -5,6 +5,7 @@ import pug from '@vituum/vite-plugin-pug';
 
 // https://ja.vitejs.dev/config/
 export default defineConfig({
+  base: '/nekopon-advanced/',
   server: {
     host: true, // IPアドレス有効化
     open: true,
